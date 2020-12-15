@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/ex04.html</title>
+</head>
+<body>
+    <form action= "ex04.jsp" method="get">
+        <fieldset>
+        아이디: <input type="text" name="user_id" id="user_id"> <br><br>
+        생년월일: <input type="date" name="today"> <br><br>
+        성별 : <input type="radio" name="sex" id="male" value="male"> 남자
+        <input type="radio" name="sex" id="female" value="female"> 여자 <br><br>
+        이메일: <input type="text" name="user_email" id="user_email"> <br><br>
+        메일 수신 : <input type="radio" name="agree" value="agree"> 수신동의
+        <input type="radio" name="agree" value="disagree"> 수신거부 <br><br>
+        핸드폰: <select name ="phone" >
+                <option value="010">010</option>
+                <option value="011">011</option>
+        </select>
+        <input type="text" name="sphone" id="sphone">
+        <input type="text" name="lphone" id="lphone"> <p></p>
+
+        직업: <select name ="job">
+            <option value="학생">학생</option>
+            <option value="공시생">공시생</option>
+            <option value="백수">백수</option> <p></p>
+        </select> <p></p>
+
+        취미: <input type="checkbox" name="subject" value="쇼핑" checked>쇼핑 
+        <input type="checkbox" name="subject" value="인터넷">인터넷 
+        <input type="checkbox" name="subject" value="음악감상">음악감상 
+        <input type="checkbox" name="subject" value="독서">독서 
+        <input type="checkbox" name="subject" value="스포츠">스포츠 <p></p>
+        
+        자기소개: <textarea name="text" cols="50" rows="10"></textarea>
+        <p></p>
+    </fieldset> <br>
+    <input type="submit" value="등록">
+    <input type="reset" value="초기화">
+</form>
+</body>
+</html>
