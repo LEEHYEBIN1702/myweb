@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/boxmodel.html</title>
+    <style>
+        article {
+            border-width: 5px;
+            border-style: dotted;
+            border-color: red;
+        
+        }
+        div {
+            background-color: burlywood;
+            border: 5px solid blue;
+            /* padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px; */
+            padding: 10%;
+            /* 탑 라이트 바텀 레프트 순서로 일일이 적어줘도 되지만
+            한번에 적어줘도 됨 */
+            /* 5px 0px; 이렇게 적으면 위 아래는 5px 오왼은 0px 준다는 뜻. */
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px gray;
+
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div>Hello</div>
+    </article>
+</body>
+</html>
