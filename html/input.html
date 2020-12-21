@@ -5,19 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html/input.html</title>
     <style>
-     [type^= 't'] {
-        background-color: aquamarine;
-      }
-      /* 타입이 t로 시작하면 적용하세요. */
+        
+        * {
+            box-sizing: border-box;   
+        }
+        
+        div {
+            max-width: 500px;
+            border: 1px dotted gray;
+            padding: 25px;
+            margin: 25px;
+        }
+
+        input[type=text] {
+            width: 50%;
+            padding: 1px 0;
+            display: inline;
+            border: 1px solid #ccc;
+            border-radius: border-box;
+            margin-left : auto;
+            margin-right : auto;
+        }
+
+        
+
+        input[type=password] {
+            width: 50%;
+            padding: 1px 0;
+            display: inline;
+            border: 1px solid #ccc;
+            border-radius: border-box;
+            margin-left : auto;
+            margin-right : auto;
+            
+        }
+
+        input[type=submit] {
+            width: 15%;
+            padding: 1px 0;
+            display: inline-block;
+            border: 1px solid gray;
+        }
+
+        input[type=reset] {
+            width: 15%;
+            padding: 1px 0;
+            display: inline-block;
+            border: 1px solid gray;
+        }
+
     </style>
 </head>
 <body>
-  <form action="input.jsp" method="get">
-    사용자명  <input type="text" name="user_name" id="user_name">
-    <br>아이디: <input type="text" name="user_id" id="user_id">
-    <br>비밀번호: <input type="password" name="user_pw" id="user_pw">
-    <br> <input type="submit" value="입력">
-    <input type="reset" value="취소">
-  </form>
+    <div>
+    <form action="input.jsp" method="get">
+        사용자명 <input type="text" name="user_name" id="user_name">
+        <br> 아이디 <input type="text" name="user_id" id="user_id">
+        <br> 비밀번호 <input type="password" name="user_pw" id="user_pw">
+        <br> <input type="submit" value="입력">
+        <input type="reset" value="취소">
+    </form>
+</div>
 </body>
 </html>
