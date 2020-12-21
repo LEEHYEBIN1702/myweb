@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/js.html</title>
+    <style>
+        .title {
+            background-color: yellow;
+        }
+        .data {
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        console.log("head 영역");
+        // document.getElementById('show').innerHTML = "Happy";
+        // 오류가 난 이유: 바디 내용 중 쇼를 찾아서 컨텐츠 내용을 해피로 바꾸라고 짰는데 
+        // 얘는 순차적으로 해석을 해오기 때문에 밑에 있는 쇼를 못 찾아서 오류가 났음
+    </script>
+</head>
+<body>
+    <div id="show">Hello</div>
+     <ul id="fruit">
+        <!-- <li>Apple</li>
+        <li>Orange</li> -->
+    </ul> 
+
+    <table id="tbl" border="1"> 
+        <!-- <tr>
+            <td class='title'>name</td>
+            <td class='title'>age</td>
+        </tr>
+        <tr>
+            <td>Hong</td>
+            <td>15</td>
+        </tr> -->
+     </table>  <!-- 하라고 하셨다가 너무 어렵다고 하지 말라고 하심  -->
+     <script src="../js/table.js"></script> 
+     <!-- 스크립트 내용을 js.js 파일로 분리해서 실행해봤다. -->
+    <script>
+         console.log("body 영역");
+         document.getElementById('show').innerHTML = "Happy";
+        //  위에 적을 땐 순차적으로 읽어오는 과정에서 컴파일 오류가 났었는데
+        //  쇼 밑에 document.getElementById('show').innerHTML = "Happy";를 적으니
+        //  쇼를 해피로 읽어오라는 컴파일 과정에 오류가 안 나게 되었다. (순서의 중요성)
+    </script>
+</body>
+</html> 

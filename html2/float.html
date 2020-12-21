@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html2/float.html</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 50px;
+            border: 3px solid #73ad21;
+            float: left;
+        }
+
+        .div2, .div4 {
+            border: 3px dotted red;
+        }
+
+        .div3 {
+            width: 100px;
+            height: 50px;
+            border: 3px solid #73ad21;
+            float: right;
+        }
+        .div4 {
+            clear: both;
+        }
+       /* float 속성을 적용 안 하고 싶을 때 쓰는 게 클리어 태그 */
+    </style>
+</head>
+
+<body>
+    <h2>float 속성</h2>
+    <div class="div1">div1</div>
+    <div class="div2">div2 - Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Ex nemo tempore ut sapiente quos laborum ipsa nesciunt recusandae cupiditate.
+        Cupiditate necessitatibus laudantium esse molestiae accusamus enim id nostrum,
+        corrupti libero!</div>
+
+    <h2>clear 속성</h2>
+    <div class="div3">div3</div>
+    <div class="div4">div4 - Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Ex nemo tempore ut sapiente quos laborum ipsa nesciunt recusandae cupiditate.
+        Cupiditate necessitatibus laudantium esse molestiae accusamus enim id nostrum,
+        corrupti libero!</div>
+</body>
+
+</html>
+

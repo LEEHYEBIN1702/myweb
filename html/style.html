@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html/style.html</title>
+    <link rel="stylesheet" href="style.css"> 
+    <!-- 스타일 태그 안의 내용을 style.css로 분리해서 그 내용을 stylesheet에 담아줬다. -->
+    <!-- p205~ -->
+    <style>
+       h1 {
+           color:yellow;
+       } 
+       /* style.css에서의 내용을 우선 실행하고 h1에 대한 내용은 옐로우로 실행 하겠다는 뜻. */
+       /* h1을 먼저 지정하고난 후에 <link rel="stylesheet" href="style.css"> 를 지정하면
+       h1을 우선 실행하고 스타일시트에 있는 h1에 대한 내용으로 바꿔 실행하게 됨. */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="color: yellowgreen;">스타일지정1</h1>
+        <h1 id ='first'>스타일 지정1-1</h1>
+        <div>
+        <h1 class ='first'>스타일 지정1-2</h1> <!-- 클래스는 여러번 써도 되지만..  -->
+        </div>
+    </header>
+
+    <content>
+        <h1>스타일 지정2</h1>
+        <h1 class ='first'>스타일 지정2-1</h1>
+        <h1 id ='first1'>스타일 지정2-2</h1>  <!-- 아이디는 한번만.. 유니크 해야함. -->
+    </content>
+    <!-- <script>
+        document.getElementById(); // 얘는 하나만 가져오는 것. 
+                                   // 가장 먼저 나오는 id 하나만 가져옴 그렇기 때문에 id 값은 유니크 해야한다.
+
+        document.getElementsByClassName('first'); //s가 붙음 여러개 가져오는 것.
+    </script> -->
+</body>
+
+</html>
