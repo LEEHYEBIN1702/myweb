@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: dodgerblue;
+            height: 400px;
+            /* flex-direction: row;  */
+            /* 디폴트 row */
+            /* flex-wrap: wrap-reverse; */
+            /* 디폴트 nowrap */
+            flex-flow: row wrap;
+            /* 플렉스 플로우를 쓰면 두개의 기능을 한번에 쓸 수 있다. */
+            /* justify-content: space-around; */
+            /* 메인 축을 (가로) 기준으로 왼쪽 정렬을 하거나 오른쪽 정렬을 하는 기능 */
+            /* flex-start flex-end */
+            /* space-between 마진 x space-around 동일한 간격의 마진 존재 */
+            /* align-content:stretch; */
+            /* 크로스 축을 (세로) 기준으로 위 아래 정렬 */
+             /* flex-start flex-end */
+             /* space-between 마진 x space-around 동일한 간격의 마진 존재 */
+             /* 기본값은 stretch */
+             /* align-items:baseline; */
+             /* 외부 영역은 상관 없이 컨텐츠에 대한 정렬 */
+             /* baseline 가운데정렬  */
+
+        }
+        .flex-container > div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            height: 50px;
+        }
+        .flex-container > div:nth-child(3) {
+            height: 30px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+    <div>1</div>    
+    <div>2</div>    
+    <div>3</div>    
+    <div>4</div>    
+    <div>5</div>  
+    <div>6</div> 
+    <div>7</div> 
+    <div>8</div> 
+    <div>9</div> 
+    <div>6</div> 
+    <div>7</div> 
+    <div>8</div> 
+    <div>9</div>     
+</body>
+</html>
