@@ -40,4 +40,4 @@ function input_freind() {
     document.getElementById('name, age, hobby').append(liTag);
 
     let ulTag = document.createElement('ul');
-    ulTag.id = 'friends';
+    ulTag.id = 'friends' = ;
