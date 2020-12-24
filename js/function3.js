@@ -41,4 +41,5 @@ function input_freind() {
 
     let ulTag = document.createElement('ul');
     ulTag.id = 'friends';
+    
 }
