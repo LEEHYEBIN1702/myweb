@@ -27,7 +27,7 @@ let i = 0;
 
     // document.getElementById('show').innerHTML= name.value+','+age.value+','+hobby.value;
     // document.getElementById('result').innerHTML= name.value+','+age.value+','+hobby.value;
-}
+// }
 // 클릭하는 이벤트가 발생할 때 펑션을 실행하겠다.
 
 function input_freind() {
@@ -40,4 +40,5 @@ function input_freind() {
     document.getElementById('name, age, hobby').append(liTag);
 
     let ulTag = document.createElement('ul');
-    ulTag.id = 'friends' = ;
+    ulTag.id = 'friends';
+}
