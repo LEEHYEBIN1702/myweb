@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tutorial</title>
+</head>
+<body>
+  <h1>DOM Lesson one</h1>  
+  <p>Hello world!</p>
+  <div id='show'></div> <!--<ul><li>One</li><li>Two</li></ul>-->
+  <script>
+      let ul = document.createElement('ul');
+      let li = document.createElement('li');
+      let text = document.createTextNode('One');
+      li.append(text);
+      ul.append(li);
+
+      document.getElementById('show').append(ul);
+      
+
+      let bdy = document.getElementsByTagName('body');
+      console.log(bdy[0].childNodes[1].childNodes[0]);
+
+      let p = document.getElementsByTagName('p');
+     console.log(p[0].previousSibling.nodeValue = 'hello'); //p를 기준으로 그 전 요소를 가져오는 메소드.
+  </script>
+</body>
+</html>

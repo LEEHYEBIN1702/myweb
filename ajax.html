@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax.html</title>
+</head>
+
+<body>
+    <div id="show"></div>
+    <script>
+        let xhtp = new XMLHttpRequest();
+        xhtp.onreadystatechange = function () {
+            //    console.log(xhtp.readyState, xhtp.status);
+            if (xhtp.readyState == 4 && xhtp.status == 200) {
+                //    console.log(xhtp.responseXML);
+                let doc = xhtp.responseXML;
+                let result = doc.querySelectorAll('dataset > record');
+                //    console.log(result);
+                //     let table = document.createElement('table');
+                //     table.setAttribute('border', '1');
+                //     let tr = document.createElement('tr');
+                //     for (let i = 0; i < result.length; i++) {
+                //         tr = document.createElement('tr');
+                //         for (let j = 0; j < result[i].childNodes.length; j++) {
+                //             let td = document.createElement('td');
+                //             let str = result[i].childNodes[j].childNodes[0].nodeValue;
+                //             let textNode = document.createTextNode(str);
+                //             td.appendChild(textNode); // appendChild = append
+                //             tr.appendChild(td);
+                //             table.appendChild(tr);
+                let table = document.createElement('table');
+                table.setAttribute('border', '1');
+                let tr = document.createElement('tr');
+                let infos = ['번호', '이름', '성']
+                for (info of infos) {
+                    let th = document.createElement('th');
+                    th.innerHTML += info
+                    table.append(th);
+                }
+                for (let i = 0; i < result.length; i++) {
+                    tr = document.createElement('tr');
+                    let td = document.createElement('td');
+                    let td1 = document.createElement('td');
+                    let td2 = document.createElement('td');
+                    let str = result[i].childNodes[0].childNodes[0].nodeValue;
+                    let str1 = result[i].childNodes[1].childNodes[0].nodeValue;
+                    let str2 = result[i].childNodes[2].childNodes[0].nodeValue;
+                    let textNode = document.createTextNode(str);
+                    let textNode1 = document.createTextNode(str1);
+                    let textNode2 = document.createTextNode(str2);
+
+                    tr.append(td);
+                    tr.append(td1);
+                    tr.append(td2);
+                    td.append(textNode);
+                    td1.append(textNode1);
+                    td2.append(textNode2);
+                    table.append(tr);
+
+                    //    result[i].childNodes[0].childNodes[0].nodeValue;
+                }
+                let show = document.getElementById('show');
+                show.appendChild(table);
+                //   show.innerHTML = xhtp.responseText;
+            }
+        }
+        xhtp.open('get', 'dataset.xml');
+        xhtp.send();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form.html</title>
+
+    <script>
+        function createData(item, idx) {
+            tr = document.createElement('tr');
+            // 체크박스
+            td = document.createElement('td');
+            let label = document.createElement('label');
+            label.setAttribute('for', 'check' + idx);
+            label.innerHTML = 'Lbl';
+        }
+    </script>
+</head>
+<body>
+    
+    <table border="1" id="tbl">
+        <tr>
+            <td><label for="id">ID</label>
+                <input type="checkbox" name="id" id="id">
+            </td>
+            <td>홍길동</td>
+            <td>20세</td>
+            <td>독서</td>
+            <td><button>OK</button></td>
+        </tr>
+        <tr>
+            <td><label for="id">ID</label>
+                <input type="checkbox" name="id" id="id">
+            </td>
+            <td>홍길동</td>
+            <td>20세</td>
+            <td>독서</td>
+            <td><button>OK</button></td>
+        </tr>
+    </table>
+
+    <script>
+        let members = [];
+        
+        for(let i = 1; i <= 3; i++) {
+        let member = {};
+            member.name = '홍길동' + i;
+            member.age = 20 + i + '세';
+            member.hobby = '독서' + i; 
+            members.push(member);  
+        }
+        console.log(members);
+
+        let fields = ['name', 'age', 'hobby'];
+        let table = document.getElementById('tbl');
+        table.setAttribute('border', '1');
+        table.setAttribute('id', 'tbl');
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+
+        members.forEach(createData);
+
+        // 데이터 영역
+        function createData(a, b, c) {
+                let tr = document.createElement('tr');
+                
+            for(m in a){
+                let td = document.createElement('td');
+                    td.innerHTML = m;
+                    tr.append(td);
+            }          
+    }
+ 
+    </script>
+        
+
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal.html</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        
+        function createHeader(item, idx, ary) {
+            let tdTag = document.createElement('th');
+            tdTag.innerHTML = item;
+            trTag.append(tdTag);
+            tableTag.append(trTag);
+        }
+
+        function createDate(a, b, c) {
+            if(b % 7 == 0) {
+                trTag = document.createElement('tr');
+            }
+            let tdTag = document.createElement('td');
+            tdTag.innerHTML = a;
+            trTag.append(tdTag);
+            tableTag.append(trTag);
+        }
+
+        let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat'];
+        let dates = [];
+        
+        for(let i = 1; i <= 31; i++) {
+            dates.push(i); //dates.unshift(i) : 역순으로 정렬
+        }
+
+        let tableTag = document.createElement('table');
+        tableTag.setAttribute('border', '1');
+        tableTag.setAttribute('id', 'tbl');
+        // console.log(tableTag);
+        let trTag = document.createElement('tr');
+        
+        // 1. 헤더영역
+        days.forEach(createHeader);
+        
+        // 2. 바디영역
+        dates.forEach(createDate);
+
+        document.getElementById('show').append(tableTag);
+    </script>
+</body>
+</html>

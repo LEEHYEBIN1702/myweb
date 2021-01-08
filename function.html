@@ -1,0 +1,102 @@
+//표만들기 미완성..
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function.html</title>
+</head>
+<body>
+    <div id="show"></div>
+    <script>
+        function sum(a, b) {
+            return a + b;
+        }
+        let result = sum (10, 20);
+
+        function showElement() {
+            let h1 = document.createElement('h1');
+            h1.innerHTML = 'Hello';
+            return h1;
+        }
+        result =  showElement();
+
+
+        function Person(name, age, hobby) {
+            this.name = name;
+            this.age = age;
+            this.hobby = hobby;
+            // this.phone = phone;
+        }
+        let persons = [];
+        Person.prototype.phone = '010-1111-2222';
+        Person.prototype.toString = function () {
+            return this.name + ',' + this.age+ ',' + this.hobby+ ',' + this.phone;
+
+        }
+        let p1 = new Person('Park', 20, 'sleeping');
+        p1.phone = '010-1234-5678';
+        let p2 = new Person('Choi', 22, 'reading');
+        persons.push(p1);
+        persons.push(p2);
+        persons.push(new Person('Kim', 25, 'game'));
+
+        function createTable(persons) {
+            //persons => 배열
+            //이름, 나이, 취미, 연락처 
+            let table = document.createElement('table');
+            table.setAttribute('border', '1');
+            let tr = document.createElement('tr');
+            table.append(tr);
+            // let th1 = document.createElement ('th');
+            // th1.innerHTML = '이름';
+            // let th2 = document.createElement ('th');
+            // th2.innerHTML = '나이';
+            // let th3 = document.createElement ('th');
+            // th3.innerHTML = '취미';
+            // let th4 = document.createElement ('th');
+            // th4.innerHTML = '연락처';
+            // tr.append(th1);
+            // tr.append(th2);
+            // tr.append(th3);
+            // tr.append(th4);
+
+            let infos = ['이름', '나이', '취미', '연락처']
+            for (info of infos) {
+                let th = document.createElement('th');
+                th.innerHTML += info
+                tr.append(th);
+            }
+            for (let i = 0; i <persons.length; i++) {    
+                
+            }
+            console.log(table);
+            return table;
+        }
+        result = createTable(persons);
+        document.getElementById('show').append(result);
+
+        let x = (a, b)  => { // let x = function (a, b) { 를 람다식으로 표현.
+            return a + b ;
+        }
+        let y =  x; // y도 x의 펑션을 참조함.
+
+        console.log(x(10, 15));
+        console.log(y(20, 25));
+
+        function findMax() {
+            console.log(arguments);
+            let max = 0;
+            for (let i=0; i<arguments.length; i++) {
+                if (arguments[i] > max) {
+                      max = arguments[i];
+                }
+            }
+            return max;
+        };
+        result = findMax(1, 5, 3, 8, 7, 4, 2);
+        console.log(result);
+    </script>
+    
+</body>
+</html>
